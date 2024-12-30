@@ -170,7 +170,8 @@ import ENV from '../../../core/env';
             result[key] = result[key].join(', ');
         });
         consultation.value=await waitingClient.isWaiting({patient_id:patient.value.id})
-   
+        console.log("consultation.value");
+        console.log(consultation.value);
         
         loading.close()
         ui.setFold(true)
@@ -204,8 +205,8 @@ import ENV from '../../../core/env';
             <ui-sheet :title="'Dossier N° '+patient.uid" :hasBack="true" :hasAction="true" :action="action" :isTop="true" />
             <el-row :gutter="10">
                 <el-col :span="18">
-					<div class="flex"> 
-                        <a 
+					<div class="flex" style="padding-top:10px ;gap: 10px;"> 
+                             <a 
                             class="btn background-clickdoc" 
                             target="_blank" 
                             :href="`${ENV.VITE_BACKEND}/certificat/aptitude/${patient.uid}/${authStore.user.id}`"
@@ -218,7 +219,21 @@ import ENV from '../../../core/env';
                             :href="`${ENV.VITE_BACKEND}/certificat/repos/${patient.uid}/${authStore.user.id}`"
                             >
                             certificat de repos
-                        </a>
+                           </a>
+                           <a 
+                            class="btn background-clickdoc" 
+                            target="_blank" 
+                            :href="`${ENV.VITE_BACKEND}/certificat/maladpro/${patient.uid}/${authStore.user.id}`"
+                            >
+                            certificat maladie pro
+                           </a>
+                           <a 
+                            class="btn background-clickdoc" 
+                            target="_blank" 
+                            :href="`${ENV.VITE_BACKEND}/facturation/${patient.uid}/${authStore.user.id}`"
+                            >
+                            Facturation
+                           </a>
 						
 					</div>
                     <div class="rounded-2xl p-4 bg-white mt-3 shadow-xl" >

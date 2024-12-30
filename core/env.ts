@@ -1,6 +1,6 @@
 const ENV = {
-    "VITE_BACKEND_API":"http://192.168.11.102:5027/api",
-    "VITE_BACKEND":"http://192.168.11.102:5027",
+    "VITE_BACKEND_API":"http://localhost:5027/api",
+    "VITE_BACKEND":"http://localhost:5027",
 
     "VITE_BACKEND_URL_AUTH":"/auth",
     "VITE_BACKEND_URL_INITIATE":"/initiate",
