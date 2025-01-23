@@ -1,6 +1,6 @@
 import {
   createRouter,
-  createWebHistory,
+  createWebHashHistory,
 } from 'vue-router';
 
 const routes = [
@@ -98,12 +98,18 @@ const routes = [
     path: '/rapports',
     name: 'Rapports',
     component: () => import('../pages/Rapports.vue')
+  },
+  {
+    path: '/Stock',
+    name: 'Stock',
+    component: () => import('../pages/Stock.vue'),
+    meta: { requiresAuth: true },
   }
 ]
 
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHashHistory(),
     routes
 })
 

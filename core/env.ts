@@ -41,7 +41,11 @@ const ENV = {
     "VITE_BACKEND_URL_IMAGERIE":"/imagerie",
     "VITE_BACKEND_URL_TABLEAU":"/tableau-perso",
     "VITE_BACKEND_URL_TASK":"/tasks",
+    
 	"VITE_BACKEND_URL_REPORTING":"/reporting",
+    "VITE_BACKEND_URL_Stock":"/stock",
+
+
     "VITE_BACKEND_URL_LOGIN":"/login",
     "VITE_BACKEND_URL_LOGOUT":"/logout",
 }
